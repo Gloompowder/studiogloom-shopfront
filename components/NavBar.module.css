@@ -1,0 +1,168 @@
+.navbar {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #000;
+  position: relative;
+  color:black;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.closeMenuItem {
+    list-style: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .closeMenuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.logoLink:visited{
+    color: black;
+}
+
+.siteTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.navLinks {
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navLink , .navLink:visited{
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+    color:#ffd351;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+
+.form > button {
+  border-radius: 5px;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 200px;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.2s ease;
+}
+
+.input:hover{
+    translate: 3px 3px 0;
+    box-shadow: 0px 0px 0;
+    border: 2px solid #ffd351;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0 #000;
+  transform: translate(-2px, -2px);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background: #ffe37f;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: #ffd351;
+  box-shadow: 0 0 0 #000;
+  transform: translate(3px, 3px);
+}
+
+
+.mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+/* Mobile Styles */
+@media (max-width: 1080px) {
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);   /* hidden by default */
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+
+  .navLinksOpen {
+    transform: translateX(0);
+  }
+
+  .navForm {
+    margin-top: 2rem;
+  }
+
+  .form {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
